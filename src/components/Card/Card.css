@@ -60,6 +60,12 @@
 }
 .card-like-icon {
 	height: 25px;
+	transition: 0.5s linear;
+}
+
+.card-like-icon.filled {
+	transition: 0.5s linear;
+	transform: scale(1.5);
 }
 
 .card-text {

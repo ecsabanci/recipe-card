@@ -13,7 +13,8 @@ function App() {
       "Bu kremsi ve baharatlı avokado sosu, günlük taco'larınızı hazırlamak için harika seçeneklerden biri. Geleneksel olarak flautas veya taquitos ile servis edilir, ancak bazı vegan enchiladalara da harika bir katkı sağlar.",
   };
 
-  const likeCount = 193;
+  
+  const [likeCount, setLikeCount] = useState(193);
   const [isLiked, setIsLiked] = useState(false);
 
   return (
@@ -27,6 +28,7 @@ function App() {
           isLiked={isLiked}
           foodImg={food}
           setIsLiked={setIsLiked}
+          setLikeCount={setLikeCount}
         />
       </header>
     </div>

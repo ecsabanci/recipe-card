@@ -4,7 +4,7 @@ import "./Card.css";
 import heartOutline from "../../assets/heart-outline.png"; // Tell webpack this JS file uses this image
 import heartFill from "../../assets/heart-fill.png"; // Tell webpack this JS file uses this image
 
-export default function Card({item,author,likeCount,isLiked,foodImg,setIsLiked}) {
+export default function Card({item,author,likeCount,isLiked,foodImg,setIsLiked,setLikeCount}) {
   return (
     <div className="card">
       <div className="card-header">
@@ -18,9 +18,9 @@ export default function Card({item,author,likeCount,isLiked,foodImg,setIsLiked})
       </div>
       <img className="card-image" src={foodImg} alt="Logo" />
       <div className="card-text">{item.description}</div>
-      <div className="card-like-bar"  onClick={() => setIsLiked(!isLiked)} >
+      <div className="card-like-bar"  onClick={() => [setIsLiked(!isLiked), !isLiked ? setLikeCount(likeCount+1) : setLikeCount(likeCount-1)]} >
         {isLiked ? (
-          <img className="card-like-icon" src={heartFill} alt="Logo" />
+          <img className="card-like-icon filled" src={heartFill} alt="Logo" />
         ) : (
           <img className="card-like-icon" src={heartOutline} alt="Logo" />
         )}
