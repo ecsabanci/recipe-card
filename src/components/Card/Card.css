@@ -1,4 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #282c34;
+}
+
+.recipies {
+	display: flex;
+  	flex-wrap: wrap;
+	align-items: center;
+	justify-content:flex-start;
+	margin: 0 auto;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
 .card {
+	
+	flex: 0 0 20%;
+	margin: 25px;
 	background-color: white;
 	color: #272727;
 	padding: 20px;
@@ -7,13 +31,12 @@
 	border-color: tomato;
 	border-style: solid;
 	transition: 200ms;
+	
 }
 
 .card:hover {
-	transition: 200ms;
-	border: 3px;
-	border-color: tomato;
-	border-style: solid;
+	transition: 200ms linear;
+	transform: scale(1.01);
 }
 
 .card-header {
@@ -23,6 +46,10 @@
 }
 
 .profile {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
 	width: 2.5rem;
 	height: 2.5rem;
 	background-color: tomato;
@@ -32,7 +59,6 @@
 	text-align: center;
 	font-weight: bold;
 	color: white;
-	justify-content: center;
 }
 
 .letter {
